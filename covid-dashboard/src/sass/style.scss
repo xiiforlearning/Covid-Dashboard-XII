@@ -1,7 +1,54 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 } 
 body {
-    background-image: url(../assets/images/test1.jpg);
+    height: 100vh;
 }
+
+
+/*----------------Header--------------*/
+header {
+    background-color: red;
+    height: 7.5vh;
+}
+
+
+/* ----------------Main block-------------- */
+.item1 { grid-area: globalStats; }
+.item2 { grid-area: table; }
+.item3 { grid-area: countryList; }
+.item4 { grid-area: map; }
+.item5 { grid-area: chart; }
+
+.grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    width: 100vw;
+    height: 85vh;
+    background-color: #2196F3;
+    grid-template-areas:
+    'globalStats map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map chart chart'
+    'countryList map map map map chart chart';
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1em 0;
+}
+
+
+/* ----------------Footer-------------- */
+footer {
+    background-color: grey;
+    font-size: 2rem;
+    height: 7.5vh;
+}
+
