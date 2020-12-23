@@ -1,7 +1,632 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 } 
 body {
-    background-image: url(../assets/images/test1.jpg);
+    height: 100vh;
 }
+
+
+/*----------------Header--------------*/
+header {
+  background-color: mintcream;
+  height: 7.5vh;
+}
+.logo-svg{
+width: 80px;
+height: 48px;
+margin-left: 5px  ;
+}
+.header-wrapper{
+display: flex;
+justify-content: space-around;
+}
+h1{
+  font-family: 'Frijole', cursive;
+font-size: 45px;
+margin-right: 300px;
+color: black;
+}
+
+
+/* ----------------Main block-------------- */
+.item1 { grid-area: globalStats; }
+.item2 { grid-area: table; }
+.item3 { grid-area: countryList; }
+.item4 { grid-area: map; }
+.item5 { grid-area: chart; }
+.flag,.flag2,.flag3{
+    width: 47px;
+    background-repeat: no-repeat;
+    height: 30px;
+    background-size: 42px;
+}
+.flag2,.flag3{
+
+  width: 31px;
+  height: 18px;
+  background-size: 30px;
+}
+.cases{
+  width: 58px;
+    text-align: initial;
+}
+.list-block-item,.death-list-item,.recovery-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.country_name,.country_name2,.country_name3{
+      width: 104px;
+      cursor: pointer;
+}
+.list-block{
+
+  height: 86%;
+
+  overflow-y: scroll;
+}
+.search{
+    width: 320px;
+}
+.item3 { 
+  height: 65vh;
+}
+.item4{
+  width: 42vw;
+}
+.item2 { 
+  display: flex;
+ flex-direction: column;
+ position: relative;
+ height: 47vh;
+ width: 40vw;
+}
+
+.block1,.block2{
+  width: 50%;
+  height: 11vh;
+}
+.death-list,.recovery-list{
+  overflow-y: scroll;
+  height: 33vh;
+}
+.blocks{
+  display: flex;
+  justify-content: space-between;
+}
+.buttons2{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 91%;
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+}
+.expandButton1{
+  position: relative;
+}
+.expandIcon{
+  position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    font-size: 100%;
+    right: 7px;
+    top: 3px;
+    cursor: pointer;
+}
+.blockbtn{
+  margin: -12px 0 0 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    font-family: 'Kaushan Script', cursive;
+
+    height: 85vh;
+    background-image: url("../assets/images/covid19-cdc-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-areas:
+    'globalStats map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map chart chart'
+    'countryList map map map map chart chart';
+}
+.grid-item {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 13px;
+    padding: 1em 0;
+}
+.buttons-case{
+  width: 70px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+.buttons-case:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.buttons-case:active{
+  color: #000;
+}
+.buttons-case:active:after{
+  background: transparent;
+}
+.buttons-case:hover:before{
+  opacity: 1;
+}
+.buttons-case:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+/* ----------------Footer-------------- */
+footer {
+  background-color: mintcream;
+  font-size: 2rem;
+  height: 7.5vh;
+  align-items: center;
+}
+.gitNames{
+display: flex;
+justify-content: space-between;
+align-items: center;
+};
+.github{
+display: flex;
+align-items: center;
+padding: 0 10px 0 5px;
+}
+.github-img{
+width: 20px;
+height: 20px;
+}
+.FIO{
+font-size: 20px;
+}
+/* ----------------keyboard-------------- */
+.use-keyboard-input {
+    display: block;
+    width: 90%;
+    margin: 7px auto;
+    padding: 1px;
+    font-size: 20px;
+    height: 4vh;
+  }
+  
+  .keyboard {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-image: url("../assets/images/COVID19-taskforce-840.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+  }
+  
+  .keyboard--hidden {
+    bottom: -100%;
+  }
+  
+  .keyboard__keys {
+    text-align: center;
+  }
+  
+  .keyboard__key {
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+  }
+  
+  .keyboard__key:active {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  .keyboard__key--wide {
+    width: 12%;
+  }
+  
+  .keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 500px;
+  }
+  
+  .keyboard__key--activatable::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+  }
+  
+  .keyboard__key--active::after {
+    background: #08ff00;
+  }
+  
+  .keyboard__key--dark {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  .chart-container{
+    position: relative;
+    width: 36vw;
+    margin: 0 auto;
+    height: 99% !important;
+}
+
+
+.item5{
+  padding: 0;
+  width: 40vw;
+}
+.open{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media(max-width: 1281px){ 
+/*----------------Header--------------*/
+
+.logo-svg{
+width: 80px;
+height: 48px;
+margin-left: 5px  ;
+}
+.header-wrapper{
+display: flex;
+justify-content: space-around;
+}
+h1{
+  font-family: 'Frijole', cursive;
+font-size: 34px;
+margin-right: 100px;
+color: black;
+}
+
+
+/* ----------------Main block-------------- */
+.item1 { grid-area: globalStats; }
+.item2 { grid-area: table; }
+.item3 { grid-area: countryList; }
+.item4 { grid-area: map; }
+.item5 { grid-area: chart; }
+.flag,.flag2,.flag3{
+    width: 47px;
+    background-repeat: no-repeat;
+    height: 30px;
+    background-size: 42px;
+}
+.flag2,.flag3{
+
+  width: 31px;
+  height: 18px;
+  background-size: 30px;
+}
+.cases{
+  width: 58px;
+    text-align: initial;
+}
+.list-block-item,.death-list-item,.recovery-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.country_name,.country_name2,.country_name3{
+      width: 104px;
+      cursor: pointer;
+}
+.list-block{
+
+  height: 86%;
+
+  overflow-y: scroll;
+}
+.search{
+    width: 320px;
+}
+.item3 { 
+  height: 70vh;
+  width: 22vw;
+}
+.item4{
+  width: 37vw;
+}
+.item2 { 
+  display: flex;
+ flex-direction: column;
+ position: relative;
+ height: 47vh;
+ width: 35vw;
+}
+.blockbtn{
+  margin: -12px 0 0 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    font-family: 'Kaushan Script', cursive;
+
+    height: 85vh;
+    background-image: url("../assets/images/covid19-cdc-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-areas:
+    'globalStats map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map chart chart'
+    'countryList map map map map chart chart';
+}
+.grid-item {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 13px;
+    padding: 1em 0;
+}
+/* ----------------Footer-------------- */
+footer {
+  background-color: mintcream;
+  font-size: 2rem;
+  height: 7.5vh;
+  align-items: center;
+}
+.gitNames{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 195px 0 0;
+};
+.github{
+display: flex;
+align-items: center;
+padding: 0 10px 0 5px;
+}
+.github-img{
+width: 20px;
+height: 20px;
+}
+.FIO{
+font-size: 20px;
+}
+  .chart-container{
+    position: relative;
+    width: 33vw;
+    margin: 0 auto;
+    height: 99% !important;
+}
+
+
+.item5{
+   margin: 0px 176px 0 0px;
+   padding: 0;
+   width: 35vw;
+}
+.open{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+}
+
+
+@media(max-width: 1024px){
+h1{
+  font-size: 23px;
+  margin-right: 65px;
+}
+.item3 { 
+  height: 72vh;
+}
+.item4{
+  width: 30vw;
+}
+.item2 { 
+  display: flex;
+ flex-direction: column;
+ position: relative;
+ height: 47vh;
+ width: 40vw;
+}
+
+.grid-item {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 10px;
+    padding: 1em 0;
+}
+
+.gitNames{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0;
+};
+.item5{
+  padding: 0;
+  width: 40vw;
+}
+}
+@media(max-width: 768px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body {
+    height: 100vh;
+}
+
+
+/*----------------Header--------------*/
+header {
+  background-color: mintcream;
+  height: 7.5vh;
+}
+.logo-svg{
+width: 80px;
+height: 48px;
+margin-left: 5px  ;
+}
+.header-wrapper{
+display: flex;
+justify-content: space-around;
+}
+h1{
+  font-family: 'Frijole', cursive;
+font-size: 18px;
+margin-right: 19px;
+color: black;
+}
+.item3 { 
+  height: 70vh;
+  width: 100%;
+}
+.item4{
+  width: 100%;
+    height: 53vh;
+}
+.item2 { 
+  display: flex;
+ flex-direction: column;
+ position: relative;
+ height: 47vh;
+ width: 100%;
+}
+
+.block1,.block2{
+  width: 50%;
+  height: 45vh;
+}
+.death-list,.recovery-list{
+  overflow-y: scroll;
+  height: 33vh;
+}
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+.grid-item {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 13px;
+    padding: 1em 0;
+}
+
+
+  .chart-container{
+    position: relative;
+    width: 82vw;
+    margin: 0 auto;
+    height: 99% !important;
+}
+
+
+.item5{
+  padding: 0;
+    width: 100%;
+    height: 30vh;
+}
+.open{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 215vh;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+}
+  
