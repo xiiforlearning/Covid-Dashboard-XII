@@ -1,3 +1,4 @@
 console.log('Hello world!');
-import {map} from './map'
-map();
+import {createMap} from './map'
+
+createMap();
