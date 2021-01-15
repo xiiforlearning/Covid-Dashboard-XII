@@ -1,7 +1,80 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 } 
 body {
-    background-image: url(../assets/images/test1.jpg);
+    height: 100vh;
 }
+
+
+/*----------------Header--------------*/
+header {
+    background-color: red;
+    height: 7.5vh;
+}
+
+
+/* ----------------Main block-------------- */
+.item1 { grid-area: globalStats; }
+.item2 { grid-area: table; }
+.item3 { grid-area: countryList; }
+.item4 { grid-area: map; }
+.item5 { grid-area: chart; }
+
+.grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    width: 100vw;
+    height: 85vh;
+    background-color: #2196F3;
+    grid-template-areas:
+    'globalStats map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map table table'
+    'countryList map map map map chart chart'
+    'countryList map map map map chart chart';
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1em 0;
+}
+
+
+/* ----------------Footer-------------- */
+footer {
+    background-color: grey;
+    font-size: 2rem;
+    height: 7.5vh;
+}
+#mapid {
+    position: relative;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
