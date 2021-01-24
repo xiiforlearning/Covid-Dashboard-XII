@@ -33,6 +33,7 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "data.js": "^0.12.11",
     "geojson-world-map": "0.0.2",
     "leaflet": "^1.7.1"
