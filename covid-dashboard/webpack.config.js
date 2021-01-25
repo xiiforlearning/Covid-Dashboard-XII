@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { SourceMapDevToolPlugin } = require("webpack");
 
 
 module.exports = (env, options) => {
@@ -42,10 +43,18 @@ module.exports = (env, options) => {
             new MiniCssExtractPlugin({
                 filename: 'style/style.css'
             }),
+            new SourceMapDevToolPlugin({
+                filename: "[file].map"
+            }),
             new CleanWebpackPlugin(),
         ],
         module: {
             rules: [ 
+                {
+                    test: /\.js$/,
+                    enforce: 'pre',
+                    use: ['source-map-loader'],
+                },
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,

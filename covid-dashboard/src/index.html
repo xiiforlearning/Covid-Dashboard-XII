@@ -1,112 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <title>Covid dashboard XII</title>
 </head>
-
 <body>
     <header>
-        <div class="header-wrapper">
-            <a class="logo" href="https://rs.school/js/" target="blank"><img class="logo-svg" src="../src/assets/images/rs_school_js.svg" alt=""></a>
-            <h1>RS School Covid Dashboard</h1>
+        <div>
+            <h1>header</h1>
         </div>
         <div></div>
     </header>
     <main>
         <div class="grid-container">
-            <div class="grid-item item1">
-                <div class="expandButton"><img class="expandIcon" src="../src/assets/images/expand.svg" alt=""></div>
-                <div class="global-cases-title">Global Cases</div>
-                <div class="global-cases"></div>
-                <div class="lost-block"></div>
-            </div>
-            <div class="grid-item item2">
-                <div class="blocks">
-                    <div class="block1">
-                        <div class="expandButton expandButton1"><img class="expandIcon blockbtn" src="../src/assets/images/expand.svg" alt=""></div>
-                        <div class="global">
-                            <div class="global-deathes-title">Global Deathes</div>
-                            <div class="global-deathes"></div>
-                        </div>
-                        <div class="death-list"></div>
-
-                    </div>
-                    <div class="block2">
-                        <div class="expandButton"><img class="expandIcon" src="../src/assets/images/expand.svg" alt=""></div>
-                        <div class="global">
-                            <div class="global-recovery-title">Global Recovery</div>
-                            <div class="global-recovery"></div>
-                        </div>
-                        <div class="recovery-list"></div>
-                    </div>
-                </div>
-
-                <div class="buttons2">
-                    <button class="sort-time buttons-case">Today</button>
-                    <button class="sort-amount buttons-case">Per 100k</button>
-                    <button class="sort-both buttons-case">Both</button>
-                    <button class="default buttons-case">Default</button>
-                </div>
-            </div>
-            <div class="grid-item item3">
-                <div class="expandButton"><img class="expandIcon" src="../src/assets/images/expand.svg" alt=""></div>
-                <textarea class="use-keyboard-input" placeholder="Search"></textarea>
-                <div class="list-header"></div>
-                <div class="list-block"></div>
-                <div class="buttons">
-                    <button class="cases-btn buttons-case">Cases</button>
-                    <button class="deathes-btn buttons-case">Deathes</button>
-                    <button class="recover-btn buttons-case">Recovery</button>
-                </div>
-            </div>
-            <div class="grid-item item4" id="mapid">
-                <div class="expandButton displayNone"><img class="expandIcon" src="../src/assets/images/expand.svg" alt=""></div>
-            </div>
-            <div class="grid-item item5">
-                <div class="expandButton"><img class="expandIcon" src="../src/assets/images/expand.svg" alt=""></div>
-                <div class="chart-container"><canvas id="myChart-case"></canvas>
-            </div>
-        </div>
+            <div class="grid-item item1">globalStats</div>
+            <div class="grid-item item2">table</div>
+            <div class="grid-item item3">countryList</div>
+            <div class="grid-item item4" id="mapid"></div>
+            <div class="grid-item item5">chart</div>
+          </div>
     </main>
     <footer>
-        <div class="gitNames">
-            <div class="github Otabek">
-                <a href="https://github.com/xiiforlearning">
-                <img class="github-img" src="../src/assets/images/25231.svg" alt="">
-                </a>
-                <p class="FIO">Azamov Otabek</p>
-            </div>
-            <div class="github Samandar">
-                <a href="https://github.com/samandarkuchkarov">
-                <img class="github-img" src="../src/assets/images/25231.svg" alt="">
-                </a>
-                <p class="FIO">Kuchkarov Samandar</p>
-            </div>
-            <div class="github Kamron">
-                <a href="https://github.com/war-art">
-                <img class="github-img" src="../src/assets/images/25231.svg" alt="">
-                </a>
-                <p class="FIO">Mirsaidov Kamron</p>
-            </div>
-        </div>
+        <div>footer</div>
     </footer>
 </body>
-
 </html>

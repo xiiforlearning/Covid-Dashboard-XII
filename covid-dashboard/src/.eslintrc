@@ -4,11 +4,10 @@
         "no-unused-vars": "warn"
     },
     "env": {
-        "es6": true,
-        "browser": true
+        "es6": "true",
+        "browser": "true"
     },
     "extends": [
-        "eslint:recommended",
-        "no-innerdeclarations:off"
+        "eslint:recommended"
     ]
 }
